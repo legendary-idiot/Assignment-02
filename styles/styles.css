@@ -34,6 +34,25 @@ body {
   font-weight: 600;
   line-height: 22px;
 }
+.section-title {
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 120%;
+  max-width: 650px;
+  text-align: center;
+  margin: 1rem auto;
+}
+.section-description {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  text-align: center;
+  max-width: 650px;
+  margin: 1rem auto 2rem;
+}
 /* Header Section */
 header {
   background: linear-gradient(
@@ -60,12 +79,33 @@ header {
 .nav-menu-list {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   gap: 3rem;
   list-style-type: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 42px;
+  padding: 4px;
+}
+
+.nav-menu-list a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
   color: rgb(255, 255, 255);
   font-size: 18px;
   font-weight: 400;
   line-height: 120%;
+}
+
+.nav-menu-list .active-menu {
+  border-radius: 42px;
+  border: none;
+  background: rgb(230, 83, 60);
+  font-size: 18px;
+  font-weight: 600;
+}
+#expand-menu {
+  display: none;
 }
 /* Hero Section */
 .hero-section-container {
@@ -103,22 +143,11 @@ header {
   gap: 1rem;
 }
 
-.util {
-  border: 2px dashed red;
-}
-
 .hero-right-content {
   position: relative;
   height: 580px;
 }
-.hero-right-content .btn-350 {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  background: rgba(48, 48, 48, 0.54);
-  width: 206px;
-  height: 96px;
-}
+
 .btn-350 {
   display: flex;
   justify-content: center;
@@ -128,6 +157,12 @@ header {
   position: absolute;
   bottom: 70px;
   left: -115px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  background: rgba(48, 48, 48, 0.54);
+  max-width: 206px;
+  height: 96px;
 }
 
 .btn-350-title {
@@ -159,7 +194,7 @@ header {
   display: block;
 }
 .btn-500 {
-  width: 200px;
+  max-width: 200px;
   height: 100px;
   padding: 20px;
   position: absolute;
@@ -185,3 +220,109 @@ header {
   line-height: 20px;
   letter-spacing: 1px;
 }
+
+/*Habit Image Container */
+.change-habit-container {
+  padding-inline: 190px;
+  margin: 100px auto;
+}
+.habit-img-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+.habit-img-card img {
+  border-radius: 50%;
+  border: 4px solid #333333;
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 1.5rem;
+}
+
+.habit-img-container h4 {
+  color: rgb(255, 255, 255);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 120%;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.habit-img-container p {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+.util {
+  border: 2px dashed red;
+}
+
+/* Responsive Design Tablet */
+@media screen and (max-width: 576px) {
+  header {
+    padding-inline: 1rem;
+  }
+  .nav-menu-list {
+    display: none;
+  }
+  #expand-menu {
+    display: block;
+  }
+  /* Hero Section */
+  .hero-section-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  .shape-style {
+    font-size: 3rem;
+    margin-right: 8px;
+  }
+  .hero-btn-container {
+    justify-content: center;
+  }
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.75rem 1.5rem;
+  }
+  .btn-500 {
+    padding: 0.75rem 1rem;
+    height: auto;
+    top: 70px;
+    right: -20px;
+  }
+  .btn-500-title {
+    font-size: 1.75rem;
+    line-height: 30px;
+  }
+  .btn-500-subtitle {
+    font-size: 0.75rem;
+  }
+  .btn-350 {
+    height: auto;
+    padding: 1rem;
+    bottom: 250px;
+    left: 0;
+  }
+  .btn-350-title {
+    font-size: 1.125rem;
+    line-height: 1rem;
+  }
+
+  .btn-350-subtitle {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+/* Responsive Design Mobile */
+/* @media screen and (max-width: 576px) {
+  .hero-section-container {
+    flex-direction: column;
+    height: auto;
+  }
+} */

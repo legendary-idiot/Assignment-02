@@ -11,13 +11,44 @@
       <nav class="nav-menu-container">
         <h3 class="nav-menu-title">Fitness</h3>
         <ul class="nav-menu-list">
-          <li>Home</li>
-          <li>Service</li>
-          <li>Contact</li>
-          <li>About</li>
+          <li><a class="active-menu" href="#">Home</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
         </ul>
+        <div id="expand-menu">
+          <svg
+            width="1.5rem"
+            height="1.5rem"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="invisible_box" data-name="invisible box">
+                <rect width="48" height="48" fill="none"></rect>
+              </g>
+              <g id="icons_Q2" data-name="icons Q2">
+                <g>
+                  <path
+                    fill="#fff"
+                    d="M42,12a2,2,0,0,1-2,2H8a2,2,0,0,1-2-2H6a2,2,0,0,1,2-2H40a2,2,0,0,1,2,2Z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    d="M42,24a2,2,0,0,1-2,2H8a2,2,0,0,1-2-2H6a2,2,0,0,1,2-2H40a2,2,0,0,1,2,2Z"
+                  ></path>
+                  <path
+                    fill="#fff"
+                    d="M42,36a2,2,0,0,1-2,2H8a2,2,0,0,1-2-2H6a2,2,0,0,1,2-2H40a2,2,0,0,1,2,2Z"
+                  ></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
       </nav>
-      <section class="hero-section-container util">
+      <section class="hero-section-container">
         <div class="hero-left-content">
           <h2 class="hero-title">
             Get body in <span class="shape-style">shape</span> & stay healthy
@@ -31,7 +62,7 @@
             <button class="btn-secondary">Download App</button>
           </div>
         </div>
-        <div class="hero-right-content util">
+        <div class="hero-right-content">
           <figure class="hero-img">
             <img src="./assets/images/images-2.png" alt="" />
           </figure>
@@ -50,7 +81,39 @@
         </div>
       </section>
     </header>
-    <main></main>
+    <main>
+      <!-- Change Your Habits -->
+      <section class="change-habit-container">
+        <h2 class="section-title">Change Your Habits</h2>
+        <p class="section-description">
+          We believe fitness should be accessible to everyone, everywhere,
+          regardless of income or access to a gym.
+        </p>
+        <div class="habit-img-container">
+          <div class="habit-img-card">
+            <img src="./assets/images/image3.png" alt="" />
+            <h4>Movement</h4>
+            <p>We believe fitness should be accessible to everyone</p>
+          </div>
+          <div class="habit-img-card">
+            <img src="./assets/images/image2.png" alt="" />
+            <h4>Time</h4>
+            <p>We believe fitness should be accessible to everyone</p>
+          </div>
+          <div class="habit-img-card">
+            <img src="./assets/images/image4.png" alt="" />
+            <h4>Practice</h4>
+            <p>We believe fitness should be accessible to everyone</p>
+          </div>
+          <div class="habit-img-card">
+            <img src="./assets/images/image5.png" alt="" />
+
+            <h4>Weight Loss</h4>
+            <p>We believe fitness should be accessible to everyone</p>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer></footer>
   </body>
 </html>
