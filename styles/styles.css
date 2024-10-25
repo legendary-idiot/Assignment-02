@@ -318,6 +318,15 @@ header {
     font-size: 0.75rem;
     line-height: 1rem;
   }
+  /* Habit Section */
+  .change-habit-container {
+    margin: 1rem 0;
+    padding-inline: 1rem;
+  }
+  .habit-img-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 /* Responsive Design Mobile */
 /* @media screen and (max-width: 576px) {
