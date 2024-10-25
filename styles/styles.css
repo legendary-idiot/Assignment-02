@@ -146,7 +146,6 @@ header {
 }
 
 .hero-right-content {
-  position: relative;
   height: 580px;
 }
 
@@ -190,9 +189,13 @@ header {
   height: 40px;
   border-radius: 50%;
 }
-
+.hero-img {
+  position: relative;
+  margin-inline: auto;
+  width: fit-content;
+}
 .hero-img img {
-  width: 100%;
+  height: 100%;
   display: block;
 }
 .btn-500 {
@@ -293,6 +296,84 @@ header {
   background-repeat: no-repeat;
 }
 
+/* BMI Section */
+.bmi-section .section-description {
+  margin-inline: 1rem;
+}
+.bmi-container {
+  background: rgb(34, 34, 34);
+  padding: 52px 190px;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+.bmi-container-title {
+  color: rgb(255, 255, 255);
+  font-size: 1.75rem;
+  font-weight: 900;
+  line-height: 120%;
+}
+.bmi-container-description {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  margin: 2rem auto 1rem;
+}
+.bmi-left-side {
+  width: 50%;
+}
+.bmi-left-side table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2.5rem;
+}
+
+.bmi-left-side th {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 120%;
+  padding: 0.8rem;
+  text-align: left;
+}
+.bmi-left-side td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 120%;
+  padding: 0.8rem;
+}
+
+.bmi-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.bmi-form input,
+.bmi-form select {
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 22px;
+  outline: none;
+}
+
+.bmi-form select option {
+  background: #333333;
+  outline: none;
+  border: none;
+}
+.activity-list {
+  grid-column: auto / span 2;
+}
 /* Responsive Design Tablet */
 @media screen and (max-width: 576px) {
   .section-title {
@@ -332,11 +413,12 @@ header {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
   }
+
   .btn-500 {
     padding: 0.75rem 1rem;
     height: auto;
-    top: 70px;
-    right: -20px;
+    top: 40px;
+    right: -10px;
   }
   .btn-500-title {
     font-size: 1.75rem;
@@ -349,7 +431,7 @@ header {
     height: auto;
     padding: 1rem;
     bottom: 250px;
-    left: 0;
+    left: 10px;
   }
   .btn-350-title {
     font-size: 1.125rem;
@@ -383,6 +465,26 @@ header {
     width: 100%;
   }
   .extra-mile-left > button {
+    width: 100%;
+  }
+  /* BMI Section */
+  .bmi-section {
+    margin: 2rem auto;
+  }
+  .bmi-container {
+    padding: 2rem 1rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .bmi-container-description,
+  .bmi-left-side table {
+    margin: 1rem auto;
+  }
+  .bmi-left-side {
+    width: 100%;
+  }
+  .bmi-form input,
+  .bmi-form select {
     width: 100%;
   }
 }
