@@ -15,6 +15,7 @@ body {
 
 /* Shared Styles */
 .btn-primary {
+  width: 220px;
   padding: 16px 40px 16px 40px;
   border-radius: 42px;
   border: none;
@@ -25,6 +26,7 @@ body {
   line-height: 22px;
 }
 .btn-secondary {
+  width: 220px;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 42px;
   padding: 16px 40px 16px 40px;
@@ -260,8 +262,46 @@ header {
   border: 2px dashed red;
 }
 
+/* Extra Mile Section */
+.extra-mile-container {
+  margin-inline: 190px;
+  border-radius: 18px;
+  background: rgb(34, 34, 34);
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.extra-mile-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.extra-mile-left .section-title,
+.extra-mile-left .section-description {
+  text-align: left;
+}
+.extra-mile-img {
+  width: 45%;
+  height: 320px;
+  border-radius: 18px;
+  overflow: hidden;
+  background-image: url("../assets/images/run.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 /* Responsive Design Tablet */
 @media screen and (max-width: 576px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .section-description {
+    font-size: 0.875rem;
+    margin: 1rem auto 1.5rem;
+  }
   header {
     padding-inline: 1rem;
   }
@@ -273,7 +313,7 @@ header {
   }
   /* Hero Section */
   .hero-section-container {
-    flex-direction: column;
+    display: block;
     height: auto;
   }
   .hero-title {
@@ -288,7 +328,9 @@ header {
   }
   .btn-primary,
   .btn-secondary {
+    width: 170px;
     padding: 0.75rem 1.5rem;
+    font-size: 1rem;
   }
   .btn-500 {
     padding: 0.75rem 1rem;
@@ -320,12 +362,28 @@ header {
   }
   /* Habit Section */
   .change-habit-container {
-    margin: 1rem 0;
+    margin: 2rem 0;
     padding-inline: 1rem;
   }
   .habit-img-container {
     flex-wrap: wrap;
     justify-content: center;
+  }
+  /* Extra Mile Section */
+  .extra-mile-container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .extra-mile-left {
+    display: block;
+  }
+  .extra-mile-img {
+    width: 100%;
+  }
+  .extra-mile-left > button {
+    width: 100%;
   }
 }
 /* Responsive Design Mobile */
