@@ -480,11 +480,39 @@ footer {
   border-top: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive for Large Device (1200px) */
-@media screen and (max-width: 1200px) {
-}
+/* Responsive Design */
+/* Large Device (1368px) */
+@media screen and (max-width: 1368px) {
+  header,
+  footer {
+    padding-inline: 3rem;
+  }
+  .hero-section-container {
+    justify-content: space-around;
+  }
+  .btn-500 {
+    right: -40px;
+    top: 100px;
+  }
+  .btn-350 {
+    bottom: 50px;
+    left: -60px;
+  }
 
-/* Responsive Design for Tablet */
+  .change-habit-container,
+  .extra-mile-container,
+  .meet-team-container {
+    margin: 3rem 2rem;
+  }
+  .bmi-section {
+    margin: 3rem auto;
+  }
+  .bmi-container {
+    padding: 3rem 2rem;
+    gap: 3rem;
+  }
+}
+/* Tablet */
 @media screen and (max-width: 992px) {
   header,
   footer {
@@ -529,7 +557,7 @@ footer {
     width: 100%;
   }
 }
-/* Changing Menu for Medium Devices */
+/* Medium Devices (Change Nav Only) */
 @media screen and (max-width: 768px) {
   .nav-menu-list {
     display: none;
@@ -547,7 +575,7 @@ footer {
     width: 100%;
   }
 }
-/* Responsive Design Mobile */
+/* Mobile */
 @media screen and (max-width: 576px) {
   .section-title {
     font-size: 2rem;
