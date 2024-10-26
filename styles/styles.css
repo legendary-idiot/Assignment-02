@@ -7,12 +7,15 @@
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
 }
-body {
+main,
+header,
+.footer-container {
   max-width: 1440px;
   margin-inline: auto;
+}
+body {
   background-color: rgba(0, 0, 0, 0.95);
 }
-
 /* Shared Styles */
 .btn-primary {
   width: 220px;
@@ -204,7 +207,7 @@ header {
   padding: 20px;
   position: absolute;
   top: 120px;
-  right: -90px;
+  right: -60px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   backdrop-filter: blur(10px);
@@ -228,12 +231,11 @@ header {
 
 /*Habit Image Container */
 .change-habit-container {
-  padding-inline: 190px;
-  margin: 100px auto;
+  margin: 100px 190px;
 }
 .habit-img-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 2.5rem;
 }
 .habit-img-card img {
@@ -297,8 +299,8 @@ header {
 }
 
 /* BMI Section */
-.bmi-section .section-description {
-  margin-inline: 1rem;
+.bmi-section {
+  margin: 100px auto;
 }
 .bmi-container {
   background: rgb(34, 34, 34);
@@ -374,7 +376,178 @@ header {
 .activity-list {
   grid-column: auto / span 2;
 }
-/* Responsive Design Tablet */
+/* Meet Team Section */
+.meet-team-container {
+  margin: 100px 190px;
+}
+.team-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.team-list figure {
+  position: relative;
+}
+.team-list > figure img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  opacity: 0.9;
+}
+.trainer-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.trainer-info h4 {
+  font-size: 1.125rem;
+  color: rgb(255, 255, 255);
+  text-overflow: ellipsis;
+}
+.trainer-info p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Footer */
+footer {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0);
+  padding: 60px 190px 30px;
+}
+.footer-container {
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+}
+.footer-left {
+  width: 45%;
+}
+.footer-left h3 {
+  color: rgb(230, 83, 60);
+  font-size: 70px;
+  font-weight: 800;
+  line-height: 120%;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.footer-left p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+}
+.footer-right-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+.footer-right-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+.footer-right-content h4 {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 120%;
+}
+.footer-right-content a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 120%;
+}
+.footer-copyright {
+  max-width: 1440px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 2rem auto 0;
+  padding-top: 1rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  text-align: center;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive for Large Device (1200px) */
+@media screen and (max-width: 1200px) {
+}
+
+/* Responsive Design for Tablet */
+@media screen and (max-width: 992px) {
+  header,
+  footer {
+    padding-inline: 2rem;
+  }
+  .nav-menu-list {
+    gap: 1.5rem;
+  }
+  .hero-title {
+    text-align: center;
+  }
+  .change-habit-container,
+  .extra-mile-container,
+  .meet-team-container {
+    margin: 3rem 2rem;
+  }
+  .bmi-section {
+    margin: 3rem auto;
+  }
+  .hero-section-container {
+    height: auto;
+    flex-direction: column;
+  }
+  .habit-img-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bmi-left-side {
+    width: 100%;
+  }
+  .bmi-container {
+    padding: 3rem 2rem;
+    flex-direction: column;
+  }
+  .extra-mile-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .extra-mile-img {
+    width: 100%;
+  }
+  .extra-mile-left > button {
+    width: 100%;
+  }
+}
+/* Changing Menu for Medium Devices */
+@media screen and (max-width: 768px) {
+  .nav-menu-list {
+    display: none;
+  }
+  #expand-menu {
+    display: block;
+  }
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-right-container {
+    justify-content: space-around;
+  }
+  .footer-left {
+    width: 100%;
+  }
+}
+/* Responsive Design Mobile */
 @media screen and (max-width: 576px) {
   .section-title {
     font-size: 2rem;
@@ -383,8 +556,10 @@ header {
     font-size: 0.875rem;
     margin: 1rem auto 1.5rem;
   }
-  header {
+  header,
+  footer {
     padding-inline: 1rem;
+    overflow: hidden;
   }
   .nav-menu-list {
     display: none;
@@ -418,14 +593,15 @@ header {
     padding: 0.75rem 1rem;
     height: auto;
     top: 40px;
-    right: -10px;
+    right: -2px;
   }
   .btn-500-title {
-    font-size: 1.75rem;
-    line-height: 30px;
+    font-size: 1.5rem;
+    line-height: 25px;
   }
   .btn-500-subtitle {
     font-size: 0.75rem;
+    letter-spacing: 0.5px;
   }
   .btn-350 {
     height: auto;
@@ -444,12 +620,10 @@ header {
   }
   /* Habit Section */
   .change-habit-container {
-    margin: 2rem 0;
-    padding-inline: 1rem;
+    margin: 2rem 1rem;
   }
   .habit-img-container {
-    flex-wrap: wrap;
-    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
   }
   /* Extra Mile Section */
   .extra-mile-container {
@@ -476,6 +650,9 @@ header {
     flex-direction: column;
     gap: 2rem;
   }
+  .bmi-section .section-description {
+    margin-inline: 1rem;
+  }
   .bmi-container-description,
   .bmi-left-side table {
     margin: 1rem auto;
@@ -487,11 +664,20 @@ header {
   .bmi-form select {
     width: 100%;
   }
-}
-/* Responsive Design Mobile */
-/* @media screen and (max-width: 576px) {
-  .hero-section-container {
-    flex-direction: column;
-    height: auto;
+  /* Meet Our Team */
+  .meet-team-container {
+    margin: 2rem 1rem;
   }
-} */
+  .team-list {
+    grid-template-columns: 1fr;
+  }
+  /* Footer */
+  .footer-container,
+  .footer-right-container {
+    flex-direction: column;
+    gap: 2.25rem;
+  }
+  .footer-left {
+    width: 100%;
+  }
+}
